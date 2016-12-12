@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp">
+
+
+        <TextView
+            android:id="@+id/account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:text="账号:"
+            android:textSize="16sp" />
+
+
+        <EditText
+            android:id="@+id/login_account"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/account_name"
+            android:gravity="center_vertical"
+            android:hint="手机号"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"
+            android:singleLine="true" />
+
+
+        <TextView
+            android:id="@+id/password_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/login_account"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:text="密码:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/login_account"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/password_name"
+            android:gravity="center_vertical"
+            android:hint="密码"
+            android:textSize="14sp"
+            android:inputType="textPassword"
+            android:paddingLeft="5dp"
+            android:singleLine="true" />
+        
+        <TextView 
+            android:id="@+id/Login_OneClick"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/login_password"
+            android:textColor="#1E90FF"
+            android:layout_marginLeft="220dp"
+            android:gravity="center"
+            android:textSize="16sp"
+            />
+
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/login_password"
+            android:background="@android:color/holo_blue_light"
+            android:layout_marginTop="40dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+        
+
+        <TextView
+            android:id="@+id/register_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/login_btn"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="注册账号"
+            android:textColor="#1E90FF"
+            android:textSize="16sp" />
+        
+        <TextView
+            android:id="@+id/passwor_reset"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/login_btn"
+            android:layout_toRightOf="@+id/register_btn"
+            android:layout_marginLeft="105dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="重置密码"
+            android:textColor="#1E90FF"
+            android:textSize="16sp" />
+        
+    </RelativeLayout>
+
+</LinearLayout>

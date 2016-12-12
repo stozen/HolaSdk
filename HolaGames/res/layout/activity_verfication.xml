@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="120dp" >
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/send_messageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:gravity="center"
+        android:text="验证码已发送到你手机"
+        android:textSize="16sp" />
+    
+    <TextView 
+        android:id="@+id/back_verfication_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:gravity="center"
+        android:text="返回"
+        android:textColor="#1E90FF"
+        android:textSize="16sp"
+        />
+    
+
+    <EditText
+        android:id="@+id/verfication_input"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/send_messageTitle"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/verfication_title"
+        android:gravity="center_vertical"
+        android:hint="验证码"
+        android:paddingLeft="10dp"
+        android:singleLine="true"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/verfication_title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/send_messageTitle"
+        android:layout_marginTop="40dp"
+        android:text="验证码:" 
+        android:textSize="16sp"
+        />
+
+    <Button
+        android:id="@+id/now_verfication_btn"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/send_messageTitle"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="center"
+        android:text="立即验证"
+        android:textColor="#ffffff"
+        android:textSize="16sp" />
+
+</RelativeLayout>

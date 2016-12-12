@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">火拉</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="hola_oauth_fast_login_user_terms">我已阅读</string>
+    <string name="hola_oauth_login_le_account">登录乐视帐号</string>
+    <string name="hola_pay_title">火拉支付</string>
+    
+    <string name="holapay_cashier_tradeinfo_price_title">支付金额：</string>
+    <string name="holapay_cashier_tradeinfo_name_title">商品名称：</string>
+    
+    <!-- AliPay -->
+    <string name="holapay_ali_pay"> 支付宝</string>
+    <string name="holapay_alipay_desc">推荐支付宝用户使用</string>
+    
+    <!-- WeiChat Pay -->
+    <string name="holapay_wx_pay">微信支付</string>
+    <string name="holapay_wx_desc">推荐安装微信6.0及以上版本使用</string>
+    <string name="holapay_wx_uninstalled">您未安装微信</string>
+    <string name="holapay_wx_wrong">微信支付参数错误</string>
+    <string name="holapay_wx_callback_no_net">网络异常</string>
+    <string name="holapay_wx_login_error_quit">登录失败，请稍候尝试</string>
+
+</resources>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hola.mysdk.holagames"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <!-- 基础模块（必须加入以下声明）START -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	
+	<!-- Alipay 相关权限 begin-->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<!-- Alipay 相关权限end  android:theme="@style/AppTheme" -->
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:name="com.hola.mysdk.application.MyHolaSDKApp"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar" 
+       >
+        <activity android:name="com.hola.mysdk.holagames.LoginActivity"></activity>
+        <activity android:name="com.hola.mysdk.holagames.RegisterActivity"></activity>
+        <activity android:name="com.hola.mysdk.holagames.MainActivity"></activity>
+        <activity android:name="com.hola.mysdk.holagames.PassWordReset"></activity>
+        <activity android:name="com.hola.mysdk.holagames.VerficationActivity"></activity>
+        <activity android:name="com.hola.mysdk.holagames.PasswordUpdateActivity"></activity>
+        <activity android:name="com.hola.mysdk.holagames.UserTermsActivity"></activity>
+        <activity android:name="com.hola.mysdk.holagames.HolaRegisterActivity"></activity>
+        <activity android:name="com.hola.alipay.sdk.AlipayActivity"></activity>
+        <activity android:name="com.hola.mysdk.holagames.HolaSDKPay"></activity>
+        <activity
+            android:name="com.hola.mysdk.holagames.WelcomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Alipay 相关  beigin-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+		</activity>
+		
+		<activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" >
+ 		</activity>
+        <!-- Alipay 相关end -->
+        
+        <service 
+            android:name="com.hola.mysdk.service.RegisterCodeTimerService"
+            android:enabled="true"
+            >
+        </service>
+        
+        <!-- android 单元测试相关的内容 -->
+        <uses-library android:name="android.test.runner"/>
+    </application>
+    <!-- android 单元测试相关的内容 -->
+    <instrumentation android:name="android.test.InstrumentationTestRunner" android:targetPackage="com.hola.mysdk.holagames"></instrumentation>
+
+</manifest>

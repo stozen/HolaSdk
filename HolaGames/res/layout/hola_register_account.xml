@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout 
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+         android:layout_alignParentTop="true"
+         android:background="#2a3147"
+        >
+        <TextView 
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="登录火拉账号"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            />
+        
+        <RelativeLayout 
+            android:id="@+id/back_icon"
+            android:layout_width="72dp"
+            android:layout_height="fill_parent"
+            >
+            
+            <ImageView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/le_oauth_back"
+                />
+        </RelativeLayout>
+        
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/btn_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        >
+        
+        <View 
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#c2c2c2"
+            />
+        
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#f8f8f8"
+            android:orientation="horizontal"
+            >
+            <RelativeLayout 
+            android:id="@+id/hola_back"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
+            
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:scaleType="center"
+                android:src="@drawable/le_oauth_webview_back"
+            />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/hola_forward"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            >
+            <ImageView 
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:scaleType="center"
+                android:src="@drawable/le_oauth_webview_forward"
+                />
+        </RelativeLayout>
+        
+        <RelativeLayout 
+            android:id="@+id/hola_refresh"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            >
+            <ImageView 
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center_vertical"
+                android:scaleType="center"
+                android:src="@drawable/le_oauth_webview_refresh"
+                />
+        		</RelativeLayout>
+          </LinearLayout>
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="20dp">
+        
+        <TextView
+            android:id="@+id/account_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:text="手机号:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/regist_nick"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/account_nickname"
+            android:gravity="center_vertical"
+            android:hint="请输入手机号"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/account_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/account_nickname"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="密  码:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/regist_account"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/regist_nick"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/account_name"
+            android:gravity="center_vertical"
+            android:hint="6-16位字母/数字"
+            android:inputType="textPassword"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/account_password_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@+id/account_name"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:text="验证码:"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/regist_password"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/regist_account"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/account_password_name"
+            android:gravity="center_vertical"
+            android:hint="验证码"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/regist_btn"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/account_password_name"
+            android:background="@android:color/holo_blue_light"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="注册"
+            android:textColor="#ffffff"
+            android:textSize="16sp" />
+        
+        <TextView
+            android:id="@+id/verfation_btn"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/account_password_name"
+            android:layout_toRightOf="@+id/regist_password"
+            android:layout_marginTop="-40dp"
+            android:gravity="center"
+            android:text="获取"
+            android:textColor="#1E90FF"
+            android:textSize="16sp"/>
+
+        <CheckBox
+            android:id="@+id/user_terms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/regist_btn"
+            android:layout_below="@+id/verfation_btn"
+            android:autoLink="web"
+            android:text="@string/hola_oauth_fast_login_user_terms"
+            android:textSize="12sp"
+             />
+        
+        <TextView
+            android:id="@+id/user_terms_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/user_terms"
+            android:layout_alignBottom="@+id/user_terms"
+            android:layout_centerHorizontal="true"
+            android:text="用户须知"
+            android:textColor="#1E90FF"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+    
+    <WebView 
+        android:id="@+id/register_action_webview"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title_bar"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        />
+</RelativeLayout>
