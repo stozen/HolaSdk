@@ -83,11 +83,12 @@ public class AlipayActivity extends FragmentActivity {
 				
 				if(TextUtils.equals(resultStatus, "9000")){
 					Toast.makeText(AlipayActivity.this, "支付成功", Toast.LENGTH_SHORT).show();
+				}else if(TextUtils.equals(resultStatus, "4000")){
+					Toast.makeText(AlipayActivity.this, "系统异常", Toast.LENGTH_SHORT).show();
 				}else{
 					Toast.makeText(AlipayActivity.this, "支付失败", Toast.LENGTH_SHORT).show();
+					break;
 				}
-				break;
-
 			}
 			case Constans.SDK_AUTH_FLAG:{
 				
