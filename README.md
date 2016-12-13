@@ -13,6 +13,6 @@
 ######实际结果:
 ######之前打开sdk界面没有保持在最上层，已消失，出现的是游戏界面
 ######将androidManifest.xml文件中的```singleTask```改为```standard```
-######生成签名文件的命令:```keytool -v -genkey -keystore cert.keystore -alias cert.keystore -keyalg RSA -validity 200000```
-######Apk签名命令:```jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore cert.keystore -sigfile cert -signedjar xxx_new_signed.apk xxx_new.apk cert.keystore```
+#######生成签名文件的命令:```keytool -v -genkey -keystore cert.keystore -alias cert.keystore -keyalg RSA -validity 200000```
+#######Apk签名命令:```jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore cert.keystore -sigfile cert -signedjar xxx_new_signed.apk xxx_new.apk cert.keystore```
 
