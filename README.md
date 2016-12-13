@@ -10,3 +10,6 @@
 >>>>>满二叉树
 * 昵称
 ![](http://www.baidu.com/img/bdlogo.gif)
+```String```
+```public static void main(String[] args){
+}```
