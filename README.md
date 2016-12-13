@@ -3,11 +3,18 @@
 ####以后有新的东西，会慢慢更新上去
 ####test
 #####holasdk
->数据结构
->>树
->>>二叉树
->>>>平衡二叉树
->>>>>满二叉树
+######```UC GamesSDK```
+#####问题复现方法
+######1、打开游戏，打开任意一个SDK界面，如登录、账户管理、充值等
+######2、使用手机home键最小化游戏到后台
+######3、在手机的应用程序菜单launcher界面找到游戏图标，点击打开
+######期望结果:
+######之前打开sdk界面仍保持在最上层
+######实际结果:
+######之前打开sdk界面没有保持在最上层，已消失，出现的是游戏界面
+######将androidManifest.xml文件中的```singleTask```改为```standard```
+######生成签名文件的命令:```keytool -v -genkey -keystore cert.keystore -alias cert.keystore -keyalg RSA -validity 200000```
+######Apk签名命令:```jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore cert.keystore -sigfile cert -signedjar xxx_new_signed.apk xxx_new.apk cert.keystore```
 * 昵称
 ![](http://www.baidu.com/img/bdlogo.gif)
 ```String```
