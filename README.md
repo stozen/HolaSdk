@@ -1,8 +1,6 @@
 #HolaSDK注意事项
 ####这是火拉科技自己研发的sdk，包含注册和支付功能
 ####以后有新的东西，会慢慢更新上去
-####test
-#####holasdk
 ######```UC GamesSDK 注意事项```
 #####问题复现方法
 ######1、打开游戏，打开任意一个SDK界面，如登录、账户管理、充值等
@@ -15,4 +13,5 @@
 ######将androidManifest.xml文件中的```singleTask```改为```standard```
 ######生成签名文件的命令:```keytool -v -genkey -keystore cert.keystore -alias cert.keystore -keyalg RSA -validity 200000```
 ######Apk签名命令:```jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore cert.keystore -sigfile cert -signedjar xxx_new_signed.apk xxx_new.apk cert.keystore```
-
+##### ```Downjoy Sdk 注意事项```
+####1、使用360签名工具对apk进行签名，找到当乐的签名文件，输入签名密码，一键签名，就是最终的apk
