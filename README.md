@@ -9,4 +9,4 @@
 >>>>平衡二叉树
 >>>>>满二叉树
 * 昵称
-![](http:www.baidu.com)
+![](http://www.baidu.com/img/bdlogo.gif)
