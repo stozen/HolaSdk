@@ -22,6 +22,8 @@ import android.widget.Toast;
 
 
 /**
+ * hola pay
+ * 
  * @author xiaowei
  * 2016-12-13 上午10:27:40
  * wlcaption@qq.com
