@@ -15,3 +15,4 @@
 ######Apk签名命令:```jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore cert.keystore -sigfile cert -signedjar xxx_new_signed.apk xxx_new.apk cert.keystore```
 ##### ```Downjoy Sdk 注意事项```
 ####1、使用360签名工具对apk进行签名，找到当乐的签名文件，输入签名密码，一键签名，就是最终的apk
+####2、添加悬浮框
