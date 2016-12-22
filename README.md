@@ -16,3 +16,5 @@
 ##### ```Downjoy Sdk 注意事项```
 ####1、使用360签名工具对apk进行签名，找到当乐的签名文件，输入签名密码，一键签名，就是最终的apk
 ####2、添加悬浮框
+####3、git 提交代码流程 git status   git add "xxx.java" git vommit -m "xxx.log" git push
+
