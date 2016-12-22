@@ -2,13 +2,23 @@ package com.hola.mysdk.holagames;
 
 import java.util.Map;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.alipay.sdk.app.PayTask;
 import com.hola.alipay.sdk.AlipayActivity;
 import com.hola.alipay.sdk.Constans;
 import com.hola.alipay.sdk.OrderInfoUtil;
 import com.hola.alipay.sdk.PayResult;
+import com.hola.mysdk.util.Utils;
+import com.hola.weichatpay.sdk.Constants;
+import com.hola.weichatpay.sdk.WXPay;
+import com.tencent.mm.sdk.modelpay.PayReq;
+import com.tencent.mm.sdk.openapi.IWXAPI;
+import com.tencent.mm.sdk.openapi.WXAPIFactory;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -29,11 +39,17 @@ import android.widget.Toast;
  * wlcaption@qq.com
  */
 public class HolaSDKPay extends Activity {
+	private IWXAPI api;
+	private Context mContext;
+	private static final int TIMELINE_SUPPORTED_VERSION = 0x21020001;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.hola_cashier_activity);
+		api = WXAPIFactory.createWXAPI(this, Constants.APP_ID,false);
+		api.registerApp(Constants.APP_ID);
 		initView();
+		
 	}
 	
 	private void initView(){
@@ -54,19 +70,30 @@ public class HolaSDKPay extends Activity {
 			
 			@Override
 			public void onClick(View v) {
+				
+				int wxSdkVersion = api.getWXAppSupportAPI();
 				if(!alipay_radio.isChecked() || !weichatpay_radio.isChecked()){
 					if(alipay_radio.isChecked() == true){
 						alipay_v2();
 					}
 					if(weichatpay_radio.isChecked() == true){
-						Toast.makeText(HolaSDKPay.this, "微信支付", Toast.LENGTH_SHORT).show();
+						Toast.makeText(HolaSDKPay.this, "wechatPay", Toast.LENGTH_SHORT).show();
+						if(api.isWXAppInstalled()){
+							if(wxSdkVersion >= TIMELINE_SUPPORTED_VERSION){
+								weipay_v2();
+							}else{
+								Toast.makeText(HolaSDKPay.this, "请安装最新版的微信", Toast.LENGTH_SHORT).show();
+							}
+						}else{
+							Toast.makeText(HolaSDKPay.this, "请安装微信", Toast.LENGTH_SHORT).show();
+						}
 					}
 				}else{
 					Toast.makeText(HolaSDKPay.this, "请选择支付方式", Toast.LENGTH_SHORT).show();
 				}
-				Intent intent = new Intent();
-				intent.setClass(HolaSDKPay.this, AlipayActivity.class);
-				startActivity(intent);
+//				Intent intent = new Intent();
+//				intent.setClass(HolaSDKPay.this, AlipayActivity.class);
+//				startActivity(intent);
 			}
 		});
 	}
@@ -94,6 +121,38 @@ public class HolaSDKPay extends Activity {
 		
 		Thread payThread = new Thread(payRunnable);
 		payThread.start();
+	}
+	
+	public void weipay_v2(){
+		String url = "http://wxpay.weixin.qq.com/pub_v2/app/app_pay.php?plat=android";
+		byte[] buf = Utils.httpGet(url);
+		if(buf != null && buf.length > 0){
+			String content = new String(buf);
+			Log.e("get server pay params", content);
+			JSONObject mJson;
+			try {
+				mJson = new JSONObject(content);
+				if(mJson != null && !mJson.has("retcode")){
+					PayReq req = new PayReq();
+					req.appId = mJson.getString("appid");
+					req.partnerId = mJson.getString("partnerid");
+					req.prepayId = mJson.getString("prepayid");
+					req.nonceStr = mJson.getString("noncestr");
+					req.timeStamp = mJson.getString("timestamp");
+					req.packageValue = mJson.getString("packagevalue");
+					req.sign = mJson.getString("sign");
+					req.extData = "app data";
+					api.sendReq(req);
+				}else{
+					Toast.makeText(HolaSDKPay.this, "返回错误", Toast.LENGTH_SHORT).show();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}else{
+			Log.d("PAY_GET", "服务器请求错误");
+			Toast.makeText(HolaSDKPay.this, "服务器请求错误", Toast.LENGTH_SHORT).show();
+		}
 	}
 	
 	private Handler mHandler = new Handler(){

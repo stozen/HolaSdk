@@ -21,5 +21,7 @@
     <string name="holapay_wx_wrong">微信支付参数错误</string>
     <string name="holapay_wx_callback_no_net">网络异常</string>
     <string name="holapay_wx_login_error_quit">登录失败，请稍候尝试</string>
+    <string name="app_tip">提示</string>
+    <string name="getting_prepayid">正在获取预支付订单...</string>
 
 </resources>

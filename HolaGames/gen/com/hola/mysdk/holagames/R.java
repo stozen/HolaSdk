@@ -128,106 +128,151 @@ public final class R {
         public static final int transparent=0x7f040031;
         public static final int transparent_80=0x7f040032;
     }
+    public static final class dimen {
+        /**  Default screen margins, per the Android Design guidelines. 
+         */
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+        public static final int fab_margin=0x7f050002;
+    }
     public static final class drawable {
         public static final int alipay=0x7f020000;
         public static final int banner_default=0x7f020001;
-        public static final int holapay_button_page_pressed=0x7f020002;
-        public static final int holapay_checkbox_checked=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int icon=0x7f020005;
-        public static final int le_oauth_back=0x7f020006;
-        public static final int le_oauth_webview_back=0x7f020007;
-        public static final int le_oauth_webview_forward=0x7f020008;
-        public static final int le_oauth_webview_refresh=0x7f020009;
-        public static final int letv_gamesdk_logo_land=0x7f02000a;
-        public static final int letv_gamesdk_logo_port=0x7f02000b;
-        public static final int logo=0x7f02000c;
-        public static final int msp_alipay_title=0x7f02000d;
-        public static final int msp_alipay_title_bg=0x7f02000e;
-        public static final int msp_icon=0x7f02000f;
-        public static final int qianhuan=0x7f020010;
-        public static final int wxlogo=0x7f020011;
+        public static final int com_tencent_msdk_webview_close=0x7f020002;
+        public static final int com_tencent_msdk_webview_left=0x7f020003;
+        public static final int com_tencent_msdk_webview_left_unclickable=0x7f020004;
+        public static final int com_tencent_msdk_webview_more=0x7f020005;
+        public static final int com_tencent_msdk_webview_qqbrowser=0x7f020006;
+        public static final int com_tencent_msdk_webview_refresh=0x7f020007;
+        public static final int com_tencent_msdk_webview_right=0x7f020008;
+        public static final int com_tencent_msdk_webview_right_unclickable=0x7f020009;
+        public static final int com_tencent_msdk_webview_stop=0x7f02000a;
+        public static final int holapay_button_page_pressed=0x7f02000b;
+        public static final int holapay_checkbox_checked=0x7f02000c;
+        public static final int ic_launcher=0x7f02000d;
+        public static final int icon=0x7f02000e;
+        public static final int le_item_view_arrow_icon=0x7f02000f;
+        public static final int le_oauth_back=0x7f020010;
+        public static final int le_oauth_webview_back=0x7f020011;
+        public static final int le_oauth_webview_forward=0x7f020012;
+        public static final int le_oauth_webview_refresh=0x7f020013;
+        public static final int letv_gamesdk_logo_land=0x7f020014;
+        public static final int letv_gamesdk_logo_port=0x7f020015;
+        public static final int logo=0x7f020016;
+        public static final int msp_alipay_title=0x7f020017;
+        public static final int msp_alipay_title_bg=0x7f020018;
+        public static final int msp_icon=0x7f020019;
+        public static final int pj_anim_background=0x7f02001a;
+        public static final int pj_image_float_left=0x7f02001b;
+        public static final int pj_image_float_logo=0x7f02001c;
+        public static final int pj_image_float_right=0x7f02001d;
+        public static final int qianhuan=0x7f02001e;
+        public static final int uac_gameassist_forum=0x7f02001f;
+        public static final int uac_gameassist_gift=0x7f020020;
+        public static final int uac_gameassist_info=0x7f020021;
+        public static final int uac_gameassist_left_bg=0x7f020022;
+        public static final int uac_gameassist_message=0x7f020023;
+        public static final int uac_gameassist_pay=0x7f020024;
+        public static final int uac_gameassist_photo_bg=0x7f020025;
+        public static final int uac_gameassist_photo_brand_left=0x7f020026;
+        public static final int uac_gameassist_photo_brand_right=0x7f020027;
+        public static final int uac_gameassist_photo_default=0x7f020028;
+        public static final int uac_gameassist_photo_left_bg=0x7f020029;
+        public static final int uac_gameassist_photo_right_bg=0x7f02002a;
+        public static final int uac_gameassist_right_bg=0x7f02002b;
+        public static final int window_close=0x7f02002c;
+        public static final int wxlogo=0x7f02002d;
     }
     public static final class id {
-        public static final int Login_OneClick=0x7f070004;
-        public static final int Retrieve_password=0x7f07000a;
-        public static final int account_name=0x7f070000;
-        public static final int account_nickname=0x7f070011;
-        public static final int account_password_name=0x7f070014;
-        public static final int alipay_radio=0x7f070038;
-        public static final int alipay_v2=0x7f07004c;
-        public static final int back=0x7f070048;
-        public static final int backIcon=0x7f070047;
-        public static final int backIcon1=0x7f070032;
-        public static final int backIcon4=0x7f07002e;
-        public static final int backIcon6=0x7f070036;
-        public static final int back_icon=0x7f07003b;
-        public static final int back_login=0x7f07001a;
-        public static final int back_login_btn=0x7f070008;
-        public static final int back_verfication_Btn=0x7f07001b;
-        public static final int banner_imageview=0x7f070041;
-        public static final int btnBar=0x7f070027;
-        public static final int btn_bar=0x7f07003c;
-        public static final int cash_total=0x7f070028;
-        public static final int close_button=0x7f070044;
-        public static final int continue_game=0x7f070045;
-        public static final int forward=0x7f070049;
-        public static final int fragment=0x7f07004e;
-        public static final int go_to_detail=0x7f070042;
-        public static final int hola_back=0x7f07003d;
-        public static final int hola_forward=0x7f07003e;
-        public static final int hola_refresh=0x7f07003f;
-        public static final int holapay_all=0x7f07004d;
-        public static final int horizontal_split_view=0x7f070043;
-        public static final int login_account=0x7f070001;
-        public static final int login_btn=0x7f070005;
-        public static final int login_password=0x7f070003;
-        public static final int logo=0x7f070022;
-        public static final int logo_bg=0x7f070021;
-        public static final int next_step=0x7f07002b;
-        public static final int now_resetpassword_btn=0x7f070010;
-        public static final int now_verfication_btn=0x7f07001f;
-        public static final int other_accoint_webview=0x7f07004b;
-        public static final int passwor_reset=0x7f070007;
-        public static final int password_name=0x7f070002;
-        public static final int password_title=0x7f07000f;
-        public static final int password_update_back=0x7f07000d;
-        public static final int pay_backIcon=0x7f070025;
-        public static final int pay_total_money=0x7f07002a;
-        public static final int product_desc=0x7f070033;
-        public static final int product_name=0x7f070034;
-        public static final int product_price=0x7f070035;
-        public static final int refresh=0x7f07004a;
-        public static final int regist_account=0x7f070013;
-        public static final int regist_btn=0x7f070016;
-        public static final int regist_nick=0x7f070012;
-        public static final int regist_password=0x7f070015;
-        public static final int register_action_webview=0x7f070040;
-        public static final int register_btn=0x7f070006;
-        public static final int relativeLayout1=0x7f07000b;
-        public static final int rootLayout=0x7f070023;
-        public static final int root_layout=0x7f070039;
-        public static final int send_messageTitle=0x7f07001c;
-        public static final int should_cash=0x7f070029;
-        public static final int splashId=0x7f070020;
-        public static final int titleBar=0x7f070024;
-        public static final int titleBar1=0x7f070031;
-        public static final int titleBar2=0x7f07002d;
-        public static final int titleBar4=0x7f07002c;
-        public static final int titleText=0x7f070046;
-        public static final int titleText4=0x7f07002f;
-        public static final int titleText6=0x7f070037;
-        public static final int titleText_pay=0x7f070026;
-        public static final int title_bar=0x7f07003a;
-        public static final int title_text=0x7f070009;
-        public static final int update_passwordTitle=0x7f07000c;
-        public static final int update_word=0x7f07000e;
-        public static final int user_terms=0x7f070018;
-        public static final int user_terms_text=0x7f070019;
-        public static final int verfation_btn=0x7f070017;
-        public static final int verfication_input=0x7f07001d;
-        public static final int verfication_title=0x7f07001e;
-        public static final int weichatpay_radio=0x7f070030;
+        public static final int Login_OneClick=0x7f080004;
+        public static final int Retrieve_password=0x7f08000a;
+        public static final int TitleText=0x7f080054;
+        public static final int account_name=0x7f080000;
+        public static final int account_nickname=0x7f080011;
+        public static final int account_password_name=0x7f080014;
+        public static final int alipay_radio=0x7f080044;
+        public static final int alipay_v2=0x7f080051;
+        public static final int appay_btn=0x7f080057;
+        public static final int appay_pre_btn=0x7f080056;
+        public static final int back=0x7f080028;
+        public static final int backIcon=0x7f080026;
+        public static final int backIcon1=0x7f08003e;
+        public static final int backIcon4=0x7f08003a;
+        public static final int backIcon6=0x7f080042;
+        public static final int back_icon=0x7f080046;
+        public static final int back_login=0x7f08001a;
+        public static final int back_login_btn=0x7f080008;
+        public static final int back_verfication_Btn=0x7f08001b;
+        public static final int banner_imageview=0x7f08004b;
+        public static final int btnBar=0x7f080027;
+        public static final int btnHide=0x7f080031;
+        public static final int btnShow=0x7f080030;
+        public static final int btn_bar=0x7f080047;
+        public static final int cash_total=0x7f080034;
+        public static final int close_button=0x7f08004e;
+        public static final int continue_game=0x7f08004f;
+        public static final int editText_prepay_id=0x7f080058;
+        public static final int float_user_guider=0x7f08002e;
+        public static final int float_user_info=0x7f08002d;
+        public static final int float_user_weal=0x7f08002f;
+        public static final int forward=0x7f080029;
+        public static final int fragment=0x7f080053;
+        public static final int go_to_detail=0x7f08004c;
+        public static final int hola_back=0x7f080048;
+        public static final int hola_forward=0x7f080049;
+        public static final int hola_refresh=0x7f08004a;
+        public static final int holapay_all=0x7f080052;
+        public static final int horizontal_split_view=0x7f08004d;
+        public static final int login_account=0x7f080001;
+        public static final int login_btn=0x7f080005;
+        public static final int login_password=0x7f080003;
+        public static final int logo=0x7f080022;
+        public static final int logo_bg=0x7f080021;
+        public static final int next_step=0x7f080037;
+        public static final int now_resetpassword_btn=0x7f080010;
+        public static final int now_verfication_btn=0x7f08001f;
+        public static final int other_accoint_webview=0x7f080050;
+        public static final int passwor_reset=0x7f080007;
+        public static final int password_name=0x7f080002;
+        public static final int password_title=0x7f08000f;
+        public static final int password_update_back=0x7f08000d;
+        public static final int pay_backIcon=0x7f080032;
+        public static final int pay_total_money=0x7f080036;
+        public static final int product_desc=0x7f08003f;
+        public static final int product_name=0x7f080040;
+        public static final int product_price=0x7f080041;
+        public static final int refresh=0x7f08002a;
+        public static final int regist_account=0x7f080013;
+        public static final int regist_btn=0x7f080016;
+        public static final int regist_nick=0x7f080012;
+        public static final int regist_password=0x7f080015;
+        public static final int register_action_webview=0x7f08002b;
+        public static final int register_btn=0x7f080006;
+        public static final int relativeLayout1=0x7f08000b;
+        public static final int rootLayout=0x7f080023;
+        public static final int root_layout=0x7f080045;
+        public static final int send_messageTitle=0x7f08001c;
+        public static final int should_cash=0x7f080035;
+        public static final int splashId=0x7f080020;
+        public static final int titleBar=0x7f080024;
+        public static final int titleBar1=0x7f08003d;
+        public static final int titleBar2=0x7f080039;
+        public static final int titleBar4=0x7f080038;
+        public static final int titleText=0x7f080025;
+        public static final int titleText4=0x7f08003b;
+        public static final int titleText6=0x7f080043;
+        public static final int titleText_pay=0x7f080033;
+        public static final int title_bar=0x7f08002c;
+        public static final int title_text=0x7f080009;
+        public static final int unifiedorder_btn=0x7f080055;
+        public static final int update_passwordTitle=0x7f08000c;
+        public static final int update_word=0x7f08000e;
+        public static final int user_terms=0x7f080018;
+        public static final int user_terms_text=0x7f080019;
+        public static final int verfation_btn=0x7f080017;
+        public static final int verfication_input=0x7f08001d;
+        public static final int verfication_title=0x7f08001e;
+        public static final int weichatpay_radio=0x7f08003c;
     }
     public static final class layout {
         public static final int activity_login=0x7f030000;
@@ -239,33 +284,39 @@ public final class R {
         public static final int activity_verfication=0x7f030006;
         public static final int activity_welcome=0x7f030007;
         public static final int activity_welcome_activiy=0x7f030008;
-        public static final int hola_cashier_activity=0x7f030009;
-        public static final int hola_register_account=0x7f03000a;
-        public static final int hola_sdk_exit_dialog=0x7f03000b;
-        public static final int hola_user_terms=0x7f03000c;
-        public static final int pay_external=0x7f03000d;
-        public static final int pay_main=0x7f03000e;
+        public static final int float_view_user=0x7f030009;
+        public static final int floatview_activity=0x7f03000a;
+        public static final int hola_cashier_activity=0x7f03000b;
+        public static final int hola_register_account=0x7f03000c;
+        public static final int hola_sdk_exit_dialog=0x7f03000d;
+        public static final int hola_user_terms=0x7f03000e;
+        public static final int pay_external=0x7f03000f;
+        public static final int pay_main=0x7f030010;
+        public static final int wechatpay_pay=0x7f030011;
+        public static final int wechatpay_result=0x7f030012;
     }
     public static final class string {
-        public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050001;
-        public static final int hola_oauth_fast_login_user_terms=0x7f050002;
-        public static final int hola_oauth_login_le_account=0x7f050003;
-        public static final int hola_pay_title=0x7f050004;
+        public static final int app_name=0x7f060000;
+        public static final int app_tip=0x7f06000f;
+        public static final int getting_prepayid=0x7f060010;
+        public static final int hello_world=0x7f060001;
+        public static final int hola_oauth_fast_login_user_terms=0x7f060002;
+        public static final int hola_oauth_login_le_account=0x7f060003;
+        public static final int hola_pay_title=0x7f060004;
         /**  AliPay 
          */
-        public static final int holapay_ali_pay=0x7f050007;
-        public static final int holapay_alipay_desc=0x7f050008;
-        public static final int holapay_cashier_tradeinfo_name_title=0x7f050006;
-        public static final int holapay_cashier_tradeinfo_price_title=0x7f050005;
-        public static final int holapay_wx_callback_no_net=0x7f05000d;
-        public static final int holapay_wx_desc=0x7f05000a;
-        public static final int holapay_wx_login_error_quit=0x7f05000e;
+        public static final int holapay_ali_pay=0x7f060007;
+        public static final int holapay_alipay_desc=0x7f060008;
+        public static final int holapay_cashier_tradeinfo_name_title=0x7f060006;
+        public static final int holapay_cashier_tradeinfo_price_title=0x7f060005;
+        public static final int holapay_wx_callback_no_net=0x7f06000d;
+        public static final int holapay_wx_desc=0x7f06000a;
+        public static final int holapay_wx_login_error_quit=0x7f06000e;
         /**  WeiChat Pay 
          */
-        public static final int holapay_wx_pay=0x7f050009;
-        public static final int holapay_wx_uninstalled=0x7f05000b;
-        public static final int holapay_wx_wrong=0x7f05000c;
+        public static final int holapay_wx_pay=0x7f060009;
+        public static final int holapay_wx_uninstalled=0x7f06000b;
+        public static final int holapay_wx_wrong=0x7f06000c;
     }
     public static final class style {
         /** 
@@ -280,29 +331,29 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f06000b;
+        public static final int AppBaseTheme=0x7f07000b;
         /**  支付部分 
          */
-        public static final int LePayCommonDialog=0x7f060000;
+        public static final int LePayCommonDialog=0x7f070000;
         /**  API 11 theme customizations can go here. 
          */
-        public static final int MspAppBaseTheme=0x7f06000a;
+        public static final int MspAppBaseTheme=0x7f07000a;
         /**  Application theme. 
          */
-        public static final int MspAppTheme=0x7f060009;
+        public static final int MspAppTheme=0x7f070009;
         /**  底部按钮样式 
          */
-        public static final int lepay_button_bottom_margin=0x7f060006;
+        public static final int lepay_button_bottom_margin=0x7f070006;
         /**  信用卡输入框布局 
          */
-        public static final int lepay_card_edit_layout=0x7f060005;
-        public static final int lepay_cashier_button_bottom_margin=0x7f060007;
-        public static final int lepay_fillparent=0x7f060001;
-        public static final int lepay_height_fillparent=0x7f060004;
+        public static final int lepay_card_edit_layout=0x7f070005;
+        public static final int lepay_cashier_button_bottom_margin=0x7f070007;
+        public static final int lepay_fillparent=0x7f070001;
+        public static final int lepay_height_fillparent=0x7f070004;
         /**  页面通用布局样式 
          */
-        public static final int lepay_page_layout_margin=0x7f060008;
-        public static final int lepay_width_fillparent=0x7f060003;
-        public static final int lepay_wrapparent=0x7f060002;
+        public static final int lepay_page_layout_margin=0x7f070008;
+        public static final int lepay_width_fillparent=0x7f070003;
+        public static final int lepay_wrapparent=0x7f070002;
     }
 }

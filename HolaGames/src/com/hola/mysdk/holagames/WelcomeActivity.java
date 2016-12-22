@@ -139,7 +139,7 @@ public class WelcomeActivity extends Activity {
 				// TODO Auto-generated method stub
 				splashImageView.setImageBitmap(null);
 				Intent intent = new Intent();
-				intent.setClass(getApplicationContext(), LoginActivity.class);
+				intent.setClass(getApplicationContext(), FloatViewActivity.class);
 				startActivity(intent);
 				WelcomeActivity.this.finish();
 				imageViewBitmap.recycle();
