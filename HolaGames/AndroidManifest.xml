@@ -49,7 +49,9 @@
         <activity android:name="com.hola.mysdk.holagames.HolaRegisterActivity"></activity>
         <activity android:name="com.hola.alipay.sdk.AlipayActivity"></activity>
         <activity android:name="com.hola.mysdk.holagames.FloatViewActivity"></activity>
-        <activity android:name="com.hola.mysdk.holagames.FloatViewUserInfo"></activity>
+        <activity android:name="com.hola.mysdk.holagames.FloatViewUserInfo"
+            android:screenOrientation="portrait"
+            ></activity>
          <activity 
             android:name="com.hola.mysdk.holagames.wxapi.WXPayEntryActivity"
             android:exported="true"

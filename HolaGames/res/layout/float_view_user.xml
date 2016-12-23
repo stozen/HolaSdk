@@ -121,39 +121,158 @@
         android:overScrollMode="never"
         android:scrollbars="none" />
 
-    <TextView
-        android:id="@+id/float_user_info"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/titleBar"
-        android:layout_toRightOf="@+id/register_action_webview"
-        android:gravity="center_vertical"
-        android:text="手机号:"
-        android:textSize="16sp" />
-    
-    <TextView
-        android:id="@+id/float_user_guider"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/float_user_info"
-        android:layout_marginTop="27dp"
-        android:gravity="center_vertical"
-        android:text="手机号:"
-        android:textSize="16sp" />
+    <RelativeLayout 
+        android:id="@+id/float_user"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="48dp"
+                >
 
-    <TextView
-        android:id="@+id/float_user_weal"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/relativeLayout1"
-        android:layout_marginTop="27dp"
-        android:gravity="center_vertical"
-        android:text="手机号:"
-        android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/float_user_icon"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:src="@drawable/hola_sub_icon_blue" />
+
+        <TextView
+            android:id="@+id/float_user_name"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/float_user_icon"
+            android:text="wlcaption" 
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/float_vip_level"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/float_user_icon"
+            android:text="Lv1"
+            android:textSize="14sp" />
+        
+        <TextView
+            android:id="@+id/float_change_user"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/float_vip_level"
+            android:text="切换账号"
+            android:textSize="14sp" />
+        
+        </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/float_user_guid"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/float_user"
+        >
+
+        <ImageView
+            android:id="@+id/float_my_gifts"
+            android:layout_width="43dp"
+            android:layout_height="35dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="19dp"
+            android:layout_marginTop="14dp"
+            android:src="@drawable/forum" />
+
+        <TextView
+            android:id="@+id/float_gift_name"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_alignLeft="@+id/float_my_gifts"
+            android:layout_below="@+id/float_my_gifts"
+            android:text="我的礼包"
+            android:textSize="12sp" />
+
+
+        <ImageView
+            android:id="@+id/float_forum"
+            android:layout_width="43dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@+id/float_my_gifts"
+            android:layout_toRightOf="@+id/float_gift_name"
+            android:src="@drawable/hola_icon_pwd_forget" />
+
+         <TextView
+             android:id="@+id/float_forum_name"
+             android:layout_width="60dp"
+             android:layout_height="25dp"
+             android:layout_alignBaseline="@+id/float_gift_name"
+             android:layout_alignBottom="@+id/float_gift_name"
+             android:layout_toRightOf="@+id/float_gift_name"
+             android:text="游戏论坛"
+             android:textSize="12sp" />
+
+         <ImageView
+             android:id="@+id/float_customer_service "
+             android:layout_width="43dp"
+             android:layout_height="35dp"
+             android:layout_above="@+id/float_forum_name"
+             android:layout_toRightOf="@+id/float_forum_name"
+             android:src="@drawable/hola_icon_pwd_open" />
+
+         <TextView
+             android:id="@+id/float_customer_name"
+             android:layout_width="60dp"
+             android:layout_height="25dp"
+             android:layout_alignBaseline="@+id/float_forum_name"
+             android:layout_alignBottom="@+id/float_forum_name"
+             android:layout_alignLeft="@+id/float_customer_service "
+             android:text="贴心客户"
+             android:textSize="12sp" />
+         
+         <ImageView
+             android:id="@+id/float_activity"
+             android:layout_width="43dp"
+             android:layout_height="35dp"
+             android:layout_above="@+id/float_forum_name"
+             android:layout_toRightOf="@+id/float_customer_name"
+             android:src="@drawable/hola_icon_pwd_set" />
+
+         <TextView
+             android:id="@+id/float_activity_name"
+             android:layout_width="60dp"
+             android:layout_height="25dp"
+             android:layout_alignTop="@+id/float_customer_name"
+             android:layout_toRightOf="@+id/float_customer_name"
+             android:text="活动专区" 
+             android:textSize="12sp"
+             />
+
+         <TextView
+             android:id="@+id/float_user_welfare_name"
+             android:layout_width="70dp"
+             android:layout_height="30dp"
+             android:layout_alignParentBottom="true"
+             android:layout_alignParentLeft="true"
+             android:layout_below="@+id/float_gift_name"
+             android:text="福利大放送"
+             android:textSize="14sp" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout 
+        android:id="@+id/float_user_welfare"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/float_user_guid"
+        >
+        
+        <ListView 
+            android:id="@+id/float_welfare_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="48dp"
+            ></ListView>
+        
+    </RelativeLayout>
+
 
 </RelativeLayout>
