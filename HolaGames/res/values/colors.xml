@@ -116,5 +116,10 @@
     <color name="lesdk_transparent">#00000000</color>
     <color name="lesdk_orange">#ffaf67</color>
     <color name="line_color">#d9d9d9</color>
+    
+    <color name="border_clo">#ccc</color>
+    <color name="text_clo">#333</color>
+    <color name="white">#fff</color>
+    <color name="blue">#419DE4</color>
 
 </resources>

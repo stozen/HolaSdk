@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F3F6"
+     >
+     
+    <LinearLayout style="@style/wrap_layout">
+        
+       <LinearLayout style="@style/top_layout"
+            >
+            <TextView style="@style/usertext" 
+            android:id="@+id/float_user_tittle"
+                android:text="个人中心"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        
+       <View style="@style/bg_line"
+           />
+        
+        <LinearLayout style="@style/top_layout" >
+
+            <TextView
+                android:id="@+id/float_user_name"
+                style="@style/usertext"
+                android:text="用户名" />
+
+            <TextView
+                android:id="@+id/float_user_nick"
+                style="@style/usertext1"
+                android:layout_weight="0.08"
+                android:text="wlcaption" />
+
+            <ImageView style="@style/img_arrow" />
+        </LinearLayout>
+        
+        <View style="@style/bg_line"/>
+        
+        <LinearLayout style="@style/mid_layout"
+            >
+            <TextView style="@style/usertext" 
+            android:id="@+id/float_bind_phone"
+                android:text="绑定手机"/>
+            
+            <TextView
+                android:id="@+id/float_user_phone"
+                style="@style/usertext1"
+                android:layout_weight="0.08"
+                android:text="183****3537" />
+            
+            
+            <ImageView style="@style/img_arrow"/>
+        </LinearLayout>
+        
+        <View style="@style/bg_line"/>
+		<LinearLayout style="@style/mid_layout">
+		    <TextView style="@style/usertext"
+		        android:text="性别"
+		        />
+		    
+		    <TextView
+                android:id="@+id/float_user_sex"
+                style="@style/usertext1"
+                android:layout_weight="0.08"
+                android:text="未知" />
+		    
+		    <ImageView style="@style/img_arrow"/>
+		</LinearLayout>
+		
+		<View style="@style/bg_line"/>
+		<LinearLayout style="@style/mid_layout">
+		    <TextView style="@style/usertext"
+		        android:text="生日"
+		        />
+		    
+		    <TextView
+                android:id="@+id/float_user_birthday"
+                style="@style/usertext1"
+                android:layout_weight="0.08"
+                android:text="2000年9月6日" />
+		    
+		    <ImageView style="@style/img_arrow"/>
+		</LinearLayout>
+		
+		<View style="@style/bg_line"/>
+		<LinearLayout style="@style/mid_layout">
+		    <TextView style="@style/usertext"
+		        android:text="地址"
+		        />
+		    <ImageView style="@style/img_arrow"/>
+		</LinearLayout>
+        
+        <View style="@style/bg_line"/>
+        
+        <LinearLayout style="@style/bottom_layout">
+            <TextView style="@style/usertext" 
+                android:text="卡包"/>
+            <ImageView style="@style/img_arrow"/>
+        </LinearLayout>
+        
+    </LinearLayout>
+</LinearLayout>

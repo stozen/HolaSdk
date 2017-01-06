@@ -24,12 +24,18 @@ public class OrderInfoUtil {
 	 * @param app_id
 	 * @return
 	 */
-	public static Map<String, String> buildOrderParamMap(String app_id){
+	public static Map<String, String> buildOrderParamMap(String app_id,String subject,String body, String price){
 		Map<String, String> keyValues = new HashMap<String, String>();
 		
 		keyValues.put("app_id", app_id);
 		
-		keyValues.put("biz_content", "{\"timeout_express\":\"30m\",\"product_code\":\"QUICK_MSECURITY_PAY\",\"total_amount\":\"0.01\",\"subject\":\"1\",\"body\":\"我是测试数据\",\"out_trade_no\":\"" + getOutTradeNo() +  "\"}");
+		keyValues.put("biz_content", "{" +
+				"\"timeout_express\":\"30m\"," +
+				"\"product_code\":\"QUICK_MSECURITY_PAY\"," +
+				"\"total_amount\":\"" +price + "\"," +
+				"\"subject\":\"" + subject +"\"," +
+				"\"body\":\""+body+"\"," +
+				"\"out_trade_no\":\"" + getOutTradeNo() +  "\"}");
 		
 		keyValues.put("charset", "utf-8");
 		
@@ -37,10 +43,47 @@ public class OrderInfoUtil {
 		
 		keyValues.put("sign_type", "RSA");
 		
-		keyValues.put("timestamp", "2016-07-29 16:55:53");
+		keyValues.put("timestamp", getSimpleDate());
 		
 		keyValues.put("version", "1.0");
 		return keyValues;
+	}
+	
+	public static Map<String, String> buildAuthInfoMap(String pid, String appid, String targetid){
+		Map<String, String> keyValues = new HashMap<String, String>();
+		
+		//商户签约拿到的app_id
+		keyValues.put("app_id", appid);
+		
+		//商户签约拿到的pid
+		keyValues.put("pid", pid);
+		
+		//服务接口名称， 固定值
+		keyValues.put("apiname", "com.alipay.account.auth");
+		
+		//商户类型标识，固定值
+		keyValues.put("app_name", "mc");
+		
+		//业务类型，固定值
+		keyValues.put("biz_type", "openservice");
+		
+		//产品码，固定值
+		keyValues.put("product_id", "APP_FAST_LOGIN");
+		
+		//授权范围， 固定值
+		keyValues.put("scope", "kuaijie");
+		
+		//商户唯一标识
+		keyValues.put("target_id", targetid);
+		
+		//授权类型，固定值
+		keyValues.put("auth_type", "AUTHACCOUNT");
+		
+		//签名类型
+		keyValues.put("sign_type", "RSA");
+		
+		return keyValues;
+		
 	}
 	
 	
@@ -125,6 +168,13 @@ public class OrderInfoUtil {
 		}
 		
 		return "sign" + encodedSign;
+	}
+	
+	private static String getSimpleDate(){
+		SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss",Locale.getDefault());
+		java.util.Date date = new java.util.Date();
+		String time = format.format(date);
+		return time;
 	}
 	
 	/**

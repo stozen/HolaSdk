@@ -152,16 +152,17 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/float_user_icon"
             android:text="Lv1"
+            android:textColor="#32CD32"
             android:textSize="14sp" />
-        
+
         <TextView
             android:id="@+id/float_change_user"
             android:layout_width="60dp"
             android:layout_height="20dp"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/float_vip_level"
+            android:layout_alignRight="@+id/float_user_name"
+            android:layout_alignTop="@+id/float_vip_level"
             android:text="切换账号"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
         
         </RelativeLayout>
     
@@ -225,7 +226,7 @@
              android:layout_alignBaseline="@+id/float_forum_name"
              android:layout_alignBottom="@+id/float_forum_name"
              android:layout_alignLeft="@+id/float_customer_service "
-             android:text="贴心客户"
+             android:text="贴心客服"
              android:textSize="12sp" />
          
          <ImageView

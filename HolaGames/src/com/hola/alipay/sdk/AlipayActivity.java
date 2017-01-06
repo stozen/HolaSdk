@@ -9,8 +9,6 @@ import com.hola.mysdk.holagames.HolaSDKPay;
 import com.hola.mysdk.holagames.R;
 import com.hola.mysdk.util.SignUtils;
 import com.mysdk.test.OrderInfoUtil2_0;
-import com.sina.weibo.sdk.constant.WBConstants.SDK;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -48,7 +46,7 @@ public class AlipayActivity extends FragmentActivity {
 	}
 	
 	public void alipay_v2(View v){
-		Map<String, String> params = OrderInfoUtil.buildOrderParamMap(Constans.APPID);
+		Map<String, String> params = OrderInfoUtil.buildOrderParamMap(Constans.APPID,"测试数据", "钻石", "0.01");
 		String orderParam = OrderInfoUtil.buildOrderParam(params);
 		String sign = OrderInfoUtil.getSign(params, Constans.RSA_PRIVATE);
 		final String orderInfo = orderParam + "&" + sign;

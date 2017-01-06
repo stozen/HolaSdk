@@ -32,6 +32,16 @@
            	tools:ignore="HardcodedText"
             />
         
+        <Button 
+            android:id="@+id/alipay_auth"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:onClick="alipay_auth"
+            android:text="授权"
+            tools:ignore="HardcodedText"
+            />
+        
     </LinearLayout>
     
 
