@@ -18,4 +18,9 @@
 ####2、添加悬浮框
 ####3、git 提交代码流程 git status   git add "xxx.java" git commit -m "xxx.log" git push
 
-###
+####Gradle教程
+1、gradlew -v 查看当前gradle的版本
+2、gradlew clean 下载Gradle的依赖
+3、gradlew build 生成相应的apk 打出的包把debug release环境
+4、gradlew assembleDebug 编译并打Debug包
+5、gradlew assembleRelease 编译并打Release包
