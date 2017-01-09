@@ -71,5 +71,10 @@ public class PassWordReset extends Activity {
 			}
 		});
 	}
-
+	
+	@Override
+	public void onBackPressed() {
+		ExitDialog exitDialog = new ExitDialog(PassWordReset.this);
+		exitDialog.show();
+	}
 }

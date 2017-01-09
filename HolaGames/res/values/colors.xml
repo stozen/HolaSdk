@@ -5,6 +5,11 @@
     <color name="lepay_red">#FF0000</color>
     <color name="lepay_white">#ffffff</color>
     <color name="lepay_cashier_black">#000000</color>
+    
+    <color name="dialog_background">#FFFFFF</color>
+    <color name="dialog_text">#181818</color>
+    <color name="dialog_btn">#1E90FF</color>
+    <color name="dialog_divider">#d1d1d1</color>
 
     <!-- 字体颜色 -->
     <color name="lepay_banner_sales">#f2c86c</color>

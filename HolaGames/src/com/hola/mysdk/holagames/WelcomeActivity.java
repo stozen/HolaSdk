@@ -17,6 +17,14 @@ import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
 import android.widget.ImageView;
 
+/***
+ * app启动闪屏界面
+ * 
+ * @author xiaowei
+ * 2017-1-9 下午12:22:22
+ * wlcaption@qq.com
+ */
+
 public class WelcomeActivity extends Activity {
 	private Handler mHandler = new Handler();
 	private ImageView splashImageView;
@@ -43,6 +51,7 @@ public class WelcomeActivity extends Activity {
 		};
 		splashImageView = (ImageView) findViewById(R.id.splashId);
 		orientation = getResources().getConfiguration().orientation;
+		
 		if (orientation == Configuration.ORIENTATION_PORTRAIT) {
 			imageViewBitmap = getBitmap(R.drawable.letv_gamesdk_logo_port);
 		} else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
@@ -139,7 +148,7 @@ public class WelcomeActivity extends Activity {
 				// TODO Auto-generated method stub
 				splashImageView.setImageBitmap(null);
 				Intent intent = new Intent();
-				intent.setClass(getApplicationContext(), FloatViewActivity.class);
+				intent.setClass(getApplicationContext(), LoginActivity.class);
 				startActivity(intent);
 				WelcomeActivity.this.finish();
 				imageViewBitmap.recycle();

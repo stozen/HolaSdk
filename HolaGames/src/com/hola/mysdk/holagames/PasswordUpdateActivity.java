@@ -80,5 +80,11 @@ public class PasswordUpdateActivity extends Activity {
 			}
 		});
 	}
+	
+	@Override
+	public void onBackPressed() {
+		ExitDialog exitDialog = new ExitDialog(PasswordUpdateActivity.this);
+		exitDialog.show();
+	}
 
 }

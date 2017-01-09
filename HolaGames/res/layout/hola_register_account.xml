@@ -138,7 +138,7 @@
             android:layout_below="@+id/account_nickname"
             android:layout_marginTop="10dp"
             android:gravity="center_vertical"
-            android:text="密  码:"
+            android:text="密     码:"
             android:textSize="16sp" />
 
         <EditText

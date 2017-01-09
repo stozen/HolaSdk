@@ -3,22 +3,16 @@ package com.hola.mysdk.holagames;
 import com.avos.avoscloud.AVCloud;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVMobilePhoneVerifyCallback;
-import com.avos.avoscloud.AVOSCloud;
 import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.SignUpCallback;
-import com.hola.mysdk.callback.HttpResponeCallBack;
 import com.hola.mysdk.service.RegisterCodeTimer;
 import com.hola.mysdk.service.RegisterCodeTimerService;
 import com.hola.mysdk.util.Utils;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.Html;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -28,11 +22,10 @@ import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class RegisterActivity extends Activity implements HttpResponeCallBack {
+public class RegisterActivity extends Activity{
 	private EditText phoneNumber; //电话号码
 	private EditText password;    //注册密码
 	private EditText verification_code; //验证码
@@ -209,51 +202,9 @@ public class RegisterActivity extends Activity implements HttpResponeCallBack {
 	
 	@Override
 	public void onBackPressed() {
-		this.runOnUiThread(new Runnable() {
-			@Override
-			public void run() {
-				AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-		        builder.setTitle("退出");
-		        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
-		            public void onClick(DialogInterface dialog, int whichButton) {
-		                //退出apk
-		                dialog.dismiss();
-		                RegisterActivity.this.finish();
-		            }
-		        });
-		        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
-		            public void onClick(DialogInterface dialog, int whichButton) {
-		                // dialog隐藏
-		                dialog.dismiss();
-		            }
-		        });
-		        builder.create().show();
-			}
-		});
+		ExitDialog exitDialog = new ExitDialog(RegisterActivity.this);
+		exitDialog.show();
 	}
-
-	@Override
-	public void onResponeStart(String apiname) {
-		
-	}
-
-	@Override
-	public void onLoading(String apiName, Object object) {
-		
-	}
-
-	@Override
-	public void onSuccess(String apiName, Object object) {
-		
-	}
-
-	@Override
-	public void onFailure(String apiName, Throwable t, int errorNo,
-			String strMsg) {
-		
-	}
-	
-	
 	
 	Handler mCodeHandler = new Handler(){
 		public void handleMessage(android.os.Message msg) {

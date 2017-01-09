@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Process;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -27,7 +28,9 @@ public class ExitDialogActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				
+				finish();
+				System.exit(0);
+				Process.killProcess(0);
 			}
 		});
 		

@@ -56,5 +56,11 @@ public class VerficationActivity extends Activity {
 			}
 		});
 	}
+	
+	@Override
+	public void onBackPressed() {
+		ExitDialog exitDialog = new ExitDialog(VerficationActivity.this);
+		exitDialog.show();
+	}
 
 }
