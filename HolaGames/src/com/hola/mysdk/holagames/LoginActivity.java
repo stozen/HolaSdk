@@ -98,6 +98,10 @@ public class LoginActivity extends Activity{
 		});
 	}
 	
+	private void testLib(){
+	
+	}
+	
 	@Override
 	public void onBackPressed() {
 		ExitDialog exitDialog = new ExitDialog(LoginActivity.this);

@@ -1,0 +1,6 @@
+1、UC  UC需要更改launchMode= “standard”方式
+2、Oppo
+3、Baidu
+4、MeiZu
+5、360需要从Unity打出Android工程
+6、华为，YYB，360由Kino打包，其中360需要用自检工具来自检，通过之后才能下发到渠道
