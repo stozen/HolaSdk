@@ -1,0 +1,4 @@
+1、android默认的keystore密码是android
+2、keytool -v -list -keystore debug.keystore 这样可以获取签名的MD5值和SHA1值
+3、查看三方应用或是系统签名用winrar 或者zip，打开apk,拖出META-INF/CERT.RSA文件，
+通过命令： keytool -printcert -file CERT.RSA，就可以查看第三方apk的签名信息，包含MD5值。

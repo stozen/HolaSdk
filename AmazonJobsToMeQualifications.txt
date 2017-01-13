@@ -1,0 +1,20 @@
+Basic Qualifications
+， Bachelor's degree in Computer Science or other technical field, or commensurate professional experience.
+， Proficiency in at least one modern programming language such as C#, C++, Java, Python or Ruby
+， Deep understanding of Computer Science fundamentals including software architecture, data structures, algorithms and complexity analysis
+， Design and architecture knowledge as well as familiarity with object oriented analysis and design patterns (OOA/OOD)
+， Ability to thrive in fast-paced, dynamic environment
+， Experience with Agile, Test-Driven Development and Continuous Deployment
+， Great passion on technologies. Strong learning and problem solving skills
+， Strong verbal and written communication skills in Mandarin and English
+
+Freferred Qualifications
+Familiarity with HTML, CSS, JavaScript and general Web 2.0 techniques
+， Familiarity with C#, .Net, and Windows frameworks
+， Experience with mobile application development
+， Experience working in an Agile/Scrum environment
+， Strong communications skills; you will be required to proactively engage fellow Amazonians both inside and outside of your team
+， Experience with distributed (multi-tiered) systems, algorithms, and relational databases
+， Ability to effectively articulate technical challenges and solutions
+， Deal well with ambiguous/undefined problems; ability to think abstractly
+， Understanding of User Interface design principles
